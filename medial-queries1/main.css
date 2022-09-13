@@ -1,54 +1,51 @@
+
 body {
   background: blanchedalmond;
 }
 
-.container {
+.container1 {
   display: flex;
-}
-
-.container div {
-  border: 5px solid rgb(196, 18, 18);
-  width: 100%;
-}
-
-div.a {
-  height: 20%;
-
-}
-
-/* body {
-  background: blanchedalmond;
-}
-
-* {
-  border: 1px solid teal;
-}
-
-.container {
-  display: flex;
-  min-height: 100vh;
+  min-height: 99vh;
   flex-direction: column;
-  justify-content: space-between;
+  row-gap: .5em;
+}
+
+.container1, .main, header, footer {
+  border: 1px solid rgb(196, 18, 18);
+  /* width: 100%; */
+  text-align: center;
+}
+
+main, header, footer {
+  font-size: 2em;
 }
 
 header, footer  {
   flex-grow: 1;
 }
 
+
 main {
   flex-grow:3;
 }
 
 
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .container {
     flex-direction: row;
     flex-wrap: wrap;
+    column-gap: .5em;
   }
   header {
-    width: 100%;
+    flex-basis: 100%;
+
   }
-  main, footer, header {
-    margin: 1em;
+
+  /* Not necessary but work: */
+  /* main {
+    flex-basis: 60%;
   }
-} */
+  footer{
+    flex-basis:25%
+  } */
+}
