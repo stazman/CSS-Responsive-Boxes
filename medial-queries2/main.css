@@ -1,44 +1,82 @@
-body {
+html, body {
   background: papayawhip;
 }
 
-.container1 {
+.container {
   display: flex;
   flex-direction: column;
-  row-gap: .5em;
+  flex-wrap: wrap;
+  max-height: 100vh;
+  /* margin: 0; */
 }
 
-.container1, .container2, .container3 .a, .b, .c, .d, .e, .f {
-  border: 1px solid rgb(196, 18, 18);
-  /* width: 100%; */
-  text-align: center;
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 20vh;
+  justify-content: space-between;
 }
 
 .a, .b, .c, .d, .e, .f {
   font-size: 2em;
+  border: 1px solid rgb(196, 18, 18);
+  text-align: center;
 }
 
 .a {
   flex-grow: 3;
   min-width: 100%;
+  max-height: 20vh;
 }
 
 .b {
   flex-grow: 6;
   min-width: 100%;
+  max-height: 40vh;
 }
 
-.container2 {
-  display: flex;
-  flex-direction: row;
-  column-gap: .5em;
-}
 .c, .d, .e {
   flex-grow: 1;
   max-width: 30%;
+  max-height: 20vh;
 }
 
 .f {
-  flex-grow: 1;
+  order: 4;
+  flex-grow: 3;
   min-width: 100%;
+  max-height: 20vh;
+}
+
+@media screen and (min-width: 600px){
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* max-width: 100%; */
+  }
+  .wrapper {
+    order: 4;
+    min-width: 60%;
+    /* flex-direction: column; */
+    /* display: inline-block; */
+  }
+  .a {
+    max-width: 70vw;
+    min-height: 20vh;
+  }
+  .b {
+    min-width: 50vw;
+    min-height: 20vh;
+    /* flex-grow: 3; */
+  }
+  .c, .d, .e, .f {
+    flex-grow: 1;
+    min-width: 10vw;
+  }
+  .f {
+    order: 3;
+    flex-grow: 2;
+    min-width: 50vh;
+  }
 }
