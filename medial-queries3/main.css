@@ -42,7 +42,6 @@ aside {
 aside > * {
   flex-grow: 1;
   max-height: 5rem;
-  /* width: 6rem; */
   flex-basis:30%;
   margin: .8%;
 }
@@ -57,4 +56,37 @@ aside > * {
 
 footer {
   flex-grow: 4;
+}
+
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  header {
+    width: 100%;
+    max-height: 10vh;
+  }
+
+  /* header {
+    min-height: 15vh;
+
+  } */
+
+  aside {
+    flex-direction: row;
+    flex-wrap:wrap;
+    flex-basis: 60%;
+    width: 50%;
+    justify-content: stretch;
+  }
+  /* aside > * {
+  } */
+
+footer {
+  /* flex-grow: 1; */
+  min-height: 70vh;
+
+ }
 }
