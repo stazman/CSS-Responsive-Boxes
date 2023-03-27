@@ -10,8 +10,9 @@ body {
 .container {
   display: flex;
   min-height: 100vh;
-  justify-content: stretch;
-  flex-wrap: wrap;
+  /* justify-content: stretch; */
+  /* This doesn't seem necessary */
+  flex-wrap: wrap;m
 }
 
 header {
@@ -42,7 +43,7 @@ aside > div {
 }
 
 main {
-  flex-grow: 4;
+  flex-grow: 1;
 }
 
 
@@ -51,7 +52,9 @@ main {
     flex-direction: row;
   }
   aside {
-    width: 80%;
+    /* width: 80%; */
+    /* This doesn't seem necessary */
+
     flex: 4;
     align-items: center;
     margin-right: 1em;
@@ -61,6 +64,7 @@ main {
   }
 
   main {
-    flex: 2;
+    flex: 2
+  /* Ideally, this should be 1.5 or so since it's too wide for the r3.png */
   }
 }
